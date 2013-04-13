@@ -130,6 +130,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Domain\Enumerator\AchievementCategory.cs" />
+    <Compile Include="Domain\Enumerator\Gender.cs" />
+    <Compile Include="Domain\Enumerator\Parametter.cs" />
+    <Compile Include="Domain\Model\Achievement.cs" />
+    <Compile Include="Domain\Model\AchievementUser.cs" />
+    <Compile Include="Domain\Model\GameObject.cs" />
+    <Compile Include="Domain\Model\GraveYard.cs" />
+    <Compile Include="Domain\Model\Highscore.cs" />
+    <Compile Include="Domain\Model\Pet.cs" />
+    <Compile Include="Domain\Model\PetStage.cs" />
+    <Compile Include="Domain\Model\SayText.cs" />
+    <Compile Include="Domain\Model\User.cs" />
     <Compile Include="GamePage.xaml.cs">
       <DependentUpon>GamePage.xaml</DependentUpon>
     </Compile>
@@ -173,6 +185,7 @@
       <Name>Microsoft Visual C++ Runtime Package</Name>
     </SDKReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>
   </PropertyGroup>
