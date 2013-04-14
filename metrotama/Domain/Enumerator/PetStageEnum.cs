@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace metrotama.Domain.Enumerator
 {
-    enum Parametter
+    enum PetStageEnum
     {
-        HEALTH = 1,
-        HYGENE = 2,
-        HUNGER = 3,
-        MOOD = 4,
-        ENERGY = 5,
-        DISCIPLINE = 6,
+        EGG=1,
+        BABY=2,
+        CHILD=3,
+        TEEN=4,
+        ADULT=5,
+        SENIOR=6
     }
 }

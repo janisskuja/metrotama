@@ -9,7 +9,7 @@ namespace metrotama.Domain.Model
 {
     class PetStage
     {
-        [PrimaryKey, AutoIncrement]
+        [PrimaryKey]
         public int PetStageId { get; set; }
         public int AgeFrom { get; set; }
         public int AgeTo { get; set; }

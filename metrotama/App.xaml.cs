@@ -1,4 +1,6 @@
-﻿using Windows.ApplicationModel;
+﻿using metrotama.Domain.Repository;
+using System.IO;
+using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 
@@ -11,6 +13,9 @@ namespace metrotama
     /// </summary>
     sealed partial class App : Application
     {
+        public static string DBPath = string.Empty;
+        public static string CurrentUserName = string.Empty;
+        private DatabaseInitRepository InitRepo = new DatabaseInitRepository();
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -42,7 +47,14 @@ namespace metrotama
                 {
                     // TODO: Load state from previously suspended application
                 }
-
+                // TODO: Get user name from windows live account
+                CurrentUserName = "TestUser";
+                // Get a reference to the SQLite database 
+                DBPath = Path.Combine(
+                    Windows.Storage.ApplicationData.Current.LocalFolder.Path, "metrotama.db");
+                // Initialize the database if necessary 
+                InitRepo.InitializeTables();
+                InitRepo.InitializeData();
                 // Place the GamePage in the current Window
                 Window.Current.Content = gamePage;
             }
@@ -63,7 +75,7 @@ namespace metrotama
             var deferral = e.SuspendingOperation.GetDeferral();
 
             // TODO: Save application state and stop any background activity
-			
+
             deferral.Complete();
         }
     }

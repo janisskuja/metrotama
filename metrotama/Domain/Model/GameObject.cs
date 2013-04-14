@@ -9,7 +9,7 @@ namespace metrotama.Domain.Model
 {
     class GameObject
     {
-        [PrimaryKey, AutoIncrement]
+        [PrimaryKey]
         public int GameObjectId { get; set; }
         public string ObjectName { get; set; }
         public string Description { get; set; }

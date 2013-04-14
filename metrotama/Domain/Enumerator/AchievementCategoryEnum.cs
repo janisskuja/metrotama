@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace metrotama.Domain.Enumerator
 {
-    enum AchievementCategory
+    enum AchievementCategoryEnum
     {
         MINIGAME = 1
     }

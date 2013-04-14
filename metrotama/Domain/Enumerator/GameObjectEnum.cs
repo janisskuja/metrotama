@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace metrotama.Domain.Enumerator
 {
-    enum Gender
+    enum GameObjectEnum
     {
-        MALE = 1,
-        FEMALE = 2
+        APPLE = 1,
+        BURGER = 2,
+        WATTER = 3,
+        BALL = 4,
+        BOOK = 5
     }
 }
