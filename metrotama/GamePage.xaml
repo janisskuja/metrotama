@@ -1,13 +1,45 @@
-﻿<SwapChainBackgroundPanel
+﻿<controls:LayoutAwarePage
     x:Class="metrotama.GamePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:metrotama"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:TCD.Controls"
     mc:Ignorable="d">
+    <SwapChainBackgroundPanel x:Name="DxSwapChainPanel" ManipulationMode="None" >
+        
+    </SwapChainBackgroundPanel>
 
-    <Grid>
-    </Grid>
-    
-</SwapChainBackgroundPanel>
+    <Page.BottomAppBar>
+        <AppBar x:Name="BtmAppBar" IsSticky="True" 
+            Loaded="AppBar_Loaded" Unloaded="AppBar_Unloaded">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel x:Name="LeftAppBarPanel" Orientation="Horizontal">
+                    <Button Style="{StaticResource SaveAppBarButtonStyle}"/>
+                    <Button Style="{StaticResource DiscardAppBarButtonStyle}"/>
+                    <Button Style="{StaticResource EditAppBarButtonStyle}"/>
+                    <Button Style="{StaticResource UndoAppBarButtonStyle}"/>
+                    <Button Style="{StaticResource RedoAppBarButtonStyle}"/>
+                </StackPanel>
+
+                <StackPanel x:Name="RightAppBarPanel" 
+                        Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Style="{StaticResource SkipBackAppBarButtonStyle}"/>
+                    <Button Style="{StaticResource SkipAheadAppBarButtonStyle}"/>
+                    <Button Style="{StaticResource PlayAppBarButtonStyle}"/>
+                    <Button Style="{StaticResource PauseAppBarButtonStyle}"/>
+                    <Button Style="{StaticResource StopAppBarButtonStyle}"/>
+                </StackPanel>
+
+                
+            </Grid>
+       
+        </AppBar>
+     
+    </Page.BottomAppBar>
+</controls:LayoutAwarePage>

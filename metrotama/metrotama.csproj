@@ -125,6 +125,12 @@
     <Reference Include="SharpDX.XAudio2">
       <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows8\SharpDX.XAudio2.dll</HintPath>
     </Reference>
+    <Reference Include="TCD.Controls">
+      <HintPath>..\packages\TCD.Controls.1.5.0\lib\netcore45\TCD.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="TCD.Controls.Settings">
+      <HintPath>..\packages\TCD.Controls.1.5.0\lib\netcore45\TCD.Controls.Settings.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -175,6 +181,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Common\MetroTamaStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
     <Page Include="Common\StandardStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
